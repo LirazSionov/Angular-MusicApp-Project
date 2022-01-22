@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dSM6nqdggLORnPrm0kQYt+8z9ArWYVB7THzUcr3xRHQxQE+KHynYZ7GqHmzSlIpKGXtI0xGkQUVdCvPWkYPhNg==",
-  "success": false,
-  "projectFilePath": "c:\\Users\\Liraz\\Documents\\private file\\תכנות לירז\\AngularProject\\AngularFirstProject\\MusicApp\\API\\API.csproj",
+  "dgSpecHash": "297FtgOxZfHhaCAsVtmf6g9mBj9g8exIXIW28/VK5G1QPOZgHSOcYmKXJUeI3PoQKUQGtbIkWJcpynMEQ8+sYQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Liraz\\Documents\\private file\\תכנות לירז\\AngularProject\\AngularFirstProject\\MusicApp\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Liraz\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Liraz\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.13\\microsoft.aspnetcore.authentication.jwtbearer.5.0.13.nupkg.sha512",
@@ -28,6 +28,7 @@
     "C:\\Users\\Liraz\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Liraz\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
     "C:\\Users\\Liraz\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\Liraz\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.7.1\\microsoft.identitymodel.jsonwebtokens.6.7.1.nupkg.sha512",
     "C:\\Users\\Liraz\\.nuget\\packages\\microsoft.identitymodel.logging\\6.7.1\\microsoft.identitymodel.logging.6.7.1.nupkg.sha512",
     "C:\\Users\\Liraz\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.7.1\\microsoft.identitymodel.protocols.6.7.1.nupkg.sha512",
     "C:\\Users\\Liraz\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.7.1\\microsoft.identitymodel.protocols.openidconnect.6.7.1.nupkg.sha512",
@@ -44,19 +45,9 @@
     "C:\\Users\\Liraz\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\Liraz\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\Liraz\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
-    "C:\\Users\\Liraz\\.nuget\\packages\\system.identitymodel.tokens.jwt\\5.0.0\\system.identitymodel.tokens.jwt.5.0.0.nupkg.sha512",
+    "C:\\Users\\Liraz\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.7.1\\system.identitymodel.tokens.jwt.6.7.1.nupkg.sha512",
     "C:\\Users\\Liraz\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\Liraz\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Detected package downgrade: System.IdentityModel.Tokens.Jwt from 6.7.1 to 5.0.0. Reference the package directly from the project to select a different version. \r\n API -> Microsoft.AspNetCore.Authentication.JwtBearer 5.0.13 -> Microsoft.IdentityModel.Protocols.OpenIdConnect 6.7.1 -> System.IdentityModel.Tokens.Jwt (>= 6.7.1) \r\n API -> System.IdentityModel.Tokens.Jwt (>= 5.0.0)",
-      "libraryId": "System.IdentityModel.Tokens.Jwt",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    }
-  ]
+  "logs": []
 }
