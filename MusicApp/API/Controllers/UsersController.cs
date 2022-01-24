@@ -1,13 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using API.Data;
-using System.Linq;
-using Microsoft.AspNetCore.Authorization;
 using API.Entities;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
+
 namespace API.Controllers
 {
     public class UsersController : BaseApiController
@@ -15,10 +13,9 @@ namespace API.Controllers
         private readonly DataContext _context;
      public UsersController(DataContext context)
      {
-            _context = context;
-         
+         _context = context;
      }   
-    [Authorize]
+    [AllowAnonymous]
     [HttpGet]
      public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers()
      {

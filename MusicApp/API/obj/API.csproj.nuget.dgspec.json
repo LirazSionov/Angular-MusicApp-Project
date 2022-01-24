@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Liraz\\Documents\\private file\\תכנות לירז\\AngularProject\\AngularFirstProject\\MusicApp\\API\\API.csproj": {}
+    "C:\\Users\\Liraz\\Documents\\private file\\תכנות לירז\\AngularProject\\AngularFirstProject\\MusicApp\\api\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Liraz\\Documents\\private file\\תכנות לירז\\AngularProject\\AngularFirstProject\\MusicApp\\API\\API.csproj": {
+    "C:\\Users\\Liraz\\Documents\\private file\\תכנות לירז\\AngularProject\\AngularFirstProject\\MusicApp\\api\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Liraz\\Documents\\private file\\תכנות לירז\\AngularProject\\AngularFirstProject\\MusicApp\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\Liraz\\Documents\\private file\\תכנות לירז\\AngularProject\\AngularFirstProject\\MusicApp\\api\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\Liraz\\Documents\\private file\\תכנות לירז\\AngularProject\\AngularFirstProject\\MusicApp\\API\\API.csproj",
+        "projectPath": "C:\\Users\\Liraz\\Documents\\private file\\תכנות לירז\\AngularProject\\AngularFirstProject\\MusicApp\\api\\API.csproj",
         "packagesPath": "C:\\Users\\Liraz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Liraz\\Documents\\private file\\תכנות לירז\\AngularProject\\AngularFirstProject\\MusicApp\\API\\obj\\",
+        "outputPath": "C:\\Users\\Liraz\\Documents\\private file\\תכנות לירז\\AngularProject\\AngularFirstProject\\MusicApp\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Liraz\\AppData\\Roaming\\NuGet\\NuGet.Config",
