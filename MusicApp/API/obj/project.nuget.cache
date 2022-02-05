@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "C0Soa0IHhULPOEJTBUjH9ADGM9qVCHuYXS3H3E8bOo4foxrdVmTJqK9+DMZ8u0SGRXOYAbOLN/omFx/gldTSEA==",
+  "dgSpecHash": "297FtgOxZfHhaCAsVtmf6g9mBj9g8exIXIW28/VK5G1QPOZgHSOcYmKXJUeI3PoQKUQGtbIkWJcpynMEQ8+sYQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Liraz\\Documents\\private file\\תכנות לירז\\AngularProject\\AngularFirstProject\\MusicApp\\api\\API.csproj",
+  "projectFilePath": "C:\\Users\\Liraz\\Documents\\private file\\תכנות לירז\\AngularProject\\AngularFirstProject\\MusicApp\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Liraz\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Liraz\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.13\\microsoft.aspnetcore.authentication.jwtbearer.5.0.13.nupkg.sha512",
