@@ -1,1 +1,55 @@
-<p>member-detail works!</p>
+<div class="row" *ngIf="member">
+ <div class="col-4">
+    <div class="card">
+      <img class="card-img-top img-thumbnail" src="{{member.photoUrl || './assets/user.jpg'}}" alt="{{member.instrumentType}}">
+    <div class="card-body">
+      <div>
+        <strong>Musical Instrument Type:</strong>
+        <p>{{member.instrumentType}}</p>
+      </div>
+      <div>
+        <strong>Cost:</strong>
+        <p>{{member.cost}}</p>
+      </div>
+      <div>
+        <strong>Location:</strong>
+        <p>{{member.city}} , {{member.country}}</p>
+      </div>
+      <div>
+        <strong>Last Apdate:</strong>
+        <p>{{member.lastApdate}}</p>
+      </div>
+      <div>
+        <strong>UpLoaded In:</strong>
+        <p>{{member.upLoaded}}</p>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="btn-group d-flex">
+        <button class="btn btn-primary">Like</button>
+        <button class="btn btn-success">Message</button>
+      </div>
+    </div>
+  </div>
+ </div>
+ <div class="col-8">
+   <tabset class="member-tabset">
+    <tab heading="About {{member.instrumentType}}">
+      <h4>Describtion:</h4>
+      <p>{{member.introduction}}</p>
+      <h4>Price:</h4>
+      <p>{{member.cost}}</p>
+    </tab>
+    <tab heading="Suitable for">
+      <h4>suitable For:</h4>
+      <p>{{member.suitablFor}}</p>
+    </tab>
+    <tab heading="Photos">
+      <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
+    </tab>
+    <tab heading="Contact us">
+      <p>Messages will go here</p>
+    </tab>
+   </tabset>
+ </div>
+</div>

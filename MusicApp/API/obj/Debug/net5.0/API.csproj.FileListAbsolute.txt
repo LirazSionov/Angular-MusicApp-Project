@@ -128,3 +128,9 @@ C:\Users\Liraz\Documents\private file\Liraz Programming\AngularProject\AngularFi
 C:\Users\Liraz\Documents\private file\Liraz Programming\AngularProject\AngularFirstProject\MusicApp\API\obj\Debug\net5.0\ref\API.dll
 C:\Users\Liraz\Documents\private file\Liraz Programming\AngularProject\AngularFirstProject\MusicApp\API\obj\Debug\net5.0\API.pdb
 C:\Users\Liraz\Documents\private file\Liraz Programming\AngularProject\AngularFirstProject\MusicApp\API\obj\Debug\net5.0\API.genruntimeconfig.cache
+C:\Users\Liraz\Documents\private file\Liraz Programming\AngularProject\AngularFirstProject\MusicApp\API\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\Liraz\Documents\private file\Liraz Programming\AngularProject\AngularFirstProject\MusicApp\API\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Liraz\Documents\private file\Liraz Programming\AngularProject\AngularFirstProject\MusicApp\API\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Liraz\Documents\private file\Liraz Programming\AngularProject\AngularFirstProject\MusicApp\API\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+C:\Users\Liraz\Documents\private file\Liraz Programming\AngularProject\AngularFirstProject\MusicApp\API\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Liraz\Documents\private file\Liraz Programming\AngularProject\AngularFirstProject\MusicApp\API\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll

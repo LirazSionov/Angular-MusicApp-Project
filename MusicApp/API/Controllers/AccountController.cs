@@ -11,7 +11,6 @@ using Microsoft.Extensions.Logging;
 
 namespace API.Controllers
 {
-    [Route("[controller]")]
     public class AccountController : BaseApiController
     {
         private readonly DataContext _context;
@@ -51,7 +50,7 @@ namespace API.Controllers
             var computeHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(loginDto.Password));
             for (int i = 0; i < computeHash.Length; i++)
             {
-                if (computeHash[i] != user.PasswordSalt[i])
+                if (computeHash[i] != user.PasswordHash[i])
                     return Unauthorized("invalid password");
             }
             return new UserDto{
