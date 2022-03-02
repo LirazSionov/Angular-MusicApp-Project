@@ -17,6 +17,8 @@ import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { ServerErrorComponent } from './errors/server-error/server-error.component';
 import { JwtInterceptor } from './interceptors/jwt.interceptor';
 import { SharedModule } from './modules/shared.module';
+import { MemberEditComponent } from './member-edit/member-edit.component';
+import { LoadingInterceptor } from './interceptors/loading.interceptor';
 
 
 @NgModule({
@@ -30,6 +32,7 @@ import { SharedModule } from './modules/shared.module';
     TestErrorsComponent,
     NotFoundComponent,
     ServerErrorComponent,
+    MemberEditComponent
 
   ],
   imports: [
@@ -50,6 +53,11 @@ import { SharedModule } from './modules/shared.module';
     {
       provide: HTTP_INTERCEPTORS,
       useClass: JwtInterceptor,
+      multi: true//In order to tell ng that there are more interceptors
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoadingInterceptor,
       multi: true//In order to tell ng that there are more interceptors
     }
   ],
