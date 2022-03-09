@@ -9,20 +9,20 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   registerMode=false;
   users:any;
-  constructor(private http: HttpClient) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
   registerToggle(){
     this.registerMode=this.registerMode;
   }
-  getUsers() {
-    //need to add token to request-------change
-    this.http.get('https://localhost:5001/api/users')
-    .subscribe(users=>this.users=users),
-      (error: any)=>console.log(error);
+  // getUsers() {
+  //   //need to add token to request-------change
+  //   this.http.get('https://localhost:5001/api/users')
+  //   .subscribe(users=>this.users=users),
+  //     (error: any)=>console.log(error);
 
-  }
+  // }
 
   cancelRegisterMode($event:boolean){
     this.registerMode=$event;
