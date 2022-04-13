@@ -27,11 +27,11 @@
        </div>
        <div>
          <strong>Last Apdate:</strong>
-         <p>{{member.lastApdate}}</p>
+         <p>{{member.lastApdate | timeago}}</p>
        </div>
        <div>
          <strong>UpLoaded In:</strong>
-         <p>{{member.upLoaded}}</p>
+         <p>{{member.upLoaded | date:'longDate'}}</p>
        </div>
      </div>
      <div class="card-footer">

@@ -40,7 +40,8 @@ namespace API.Controllers
             return new UserDto
             {
                 Username = user.UserName,
-                Token = _tokenServices.CreateToken(user)
+                Token = _tokenServices.CreateToken(user),
+                InstrumentType=user.InstrumentType
             };
         }
         [HttpPost("login")]

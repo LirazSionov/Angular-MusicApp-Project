@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 import { User } from '../models/user';
 import { AccountService } from '../services/account.service';
 import { take } from 'rxjs/operators';
+import { InstrumentType } from '../models/instrument-type';
 
 @Injectable()
 export class JwtInterceptor implements HttpInterceptor {
@@ -16,7 +17,7 @@ export class JwtInterceptor implements HttpInterceptor {
   constructor(private account: AccountService) { }
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    let currentUser: User = { token: '', username: '' };
+    let currentUser: User = { token: '', username: '' ,instrumentType:InstrumentType.nothing};
 
     this.account.currentUser$.pipe(take(1)).subscribe((user: User | null) => { if (user) currentUser = user });
     if (currentUser.token) {
