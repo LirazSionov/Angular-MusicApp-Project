@@ -4,7 +4,6 @@ import { MemberListComponent } from '../members/member-list/member-list.componen
 import { MemberDetailComponent } from '../members/member-detail/member-detail.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from './shared.module';
-import { MemberCardComponent } from '../members/member-card/member-card.component';
 
 
 const routes:Routes=[
@@ -16,7 +15,6 @@ const routes:Routes=[
   declarations: [
     MemberListComponent,
     MemberDetailComponent,
-    MemberCardComponent,
 
 
   ],
@@ -29,7 +27,6 @@ const routes:Routes=[
     RouterModule,
     MemberListComponent,
     MemberDetailComponent,
-    MemberCardComponent
   ]
 })
 export class MembersModule { }

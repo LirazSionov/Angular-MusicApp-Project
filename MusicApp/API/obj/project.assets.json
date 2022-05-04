@@ -1902,11 +1902,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Liraz\\Documents\\private file\\Liraz Programming\\AngularProject\\AngularFirstProject\\MusicApp\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\Liraz\\Documents\\private file\\Liraz Programming\\AngularProject\\AngularFirstProject\\MusicApp\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "c:\\Users\\Liraz\\Documents\\private file\\Liraz Programming\\AngularProject\\AngularFirstProject\\MusicApp\\API\\API.csproj",
+      "projectPath": "C:\\Users\\Liraz\\Documents\\private file\\Liraz Programming\\AngularProject\\AngularFirstProject\\MusicApp\\API\\API.csproj",
       "packagesPath": "C:\\Users\\Liraz\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Liraz\\Documents\\private file\\Liraz Programming\\AngularProject\\AngularFirstProject\\MusicApp\\API\\obj\\",
+      "outputPath": "C:\\Users\\Liraz\\Documents\\private file\\Liraz Programming\\AngularProject\\AngularFirstProject\\MusicApp\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Liraz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1916,6 +1916,7 @@
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1993,7 +1994,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
       }
     }
   }

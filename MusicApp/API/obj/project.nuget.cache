@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zoYX02PVrRTNpLRP+iyygnPqCWl/mEkDK2oqxjFKlsp0CbkEx8S+5lN6G2ET145tINJUYG3mh8wvv7L0XKEbIw==",
+  "dgSpecHash": "j+cAwGHHIpCd2pzWTWYlrOovwjUGS6iFv8KjO3b+PwZDHHSxLpmmkioIshQSvbwlPwCs8WkQ0/JGQ7FHWr8xcw==",
   "success": true,
-  "projectFilePath": "c:\\Users\\Liraz\\Documents\\private file\\Liraz Programming\\AngularProject\\AngularFirstProject\\MusicApp\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\Liraz\\Documents\\private file\\Liraz Programming\\AngularProject\\AngularFirstProject\\MusicApp\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Liraz\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\Liraz\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

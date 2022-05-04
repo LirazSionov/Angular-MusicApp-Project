@@ -1,6 +1,5 @@
 import { HttpClient, HttpParams, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { NgxGalleryThumbnailsComponent } from '@kolkov/ngx-gallery';
 import { map, Observable, of, take, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Member } from '../models/member';
@@ -28,6 +27,17 @@ export class MemberService {
         this.userParams=new UserParams(user);
       });
      }
+     getLikes(predicate:string, pageNumber:number,pageSize:number){
+       let params=this.getPaginationParams(pageNumber,pageSize);
+       params.append('predicate',predicate);
+       return this.getPaginatedResult<Partial<Member>[]>(`${this.baseUrl}likes`,params)
+       //return this.http.get<Partial<Member>[]>(`${this.baseUrl}likes?predicate=${predicate}`);
+     }
+     addLikes(username:string){
+      const url=`${this.baseUrl}likes/${username}`;
+     return this.http.post(url,{});
+    }
+
      public get UserParams() : UserParams {
       return this.userParams;
     }
@@ -45,7 +55,7 @@ export class MemberService {
     const response=this.memberCache.get(cacheKey);
     if(response) return of(response);
 
-    let params=this.getPaginationParams(userParams);
+    let params=this.getPaginationParams(userParams.pageNumber,userParams.pageSize);
     params=params.append('minCost',userParams.minCost.toString());
     params=params.append('maxCost',userParams.maxCost.toString());
     params=params.append('instrumentType',userParams.instrumentType);
@@ -101,7 +111,7 @@ export class MemberService {
   deletePhoto(PhotoId:number){
     return this.http.delete(`${this.baseUrl}users/delete-photo/${PhotoId}`);
   }
-  private getPaginationParams({pageNumber, pageSize}:UserParams){
+  private getPaginationParams(pageNumber:number, pageSize:number){
     let params=new HttpParams();
     params=params.append('pageNumber',pageNumber.toString());
     params=params.append('pageSize',pageSize.toString());

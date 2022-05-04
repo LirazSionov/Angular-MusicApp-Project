@@ -134,3 +134,6 @@ C:\Users\Liraz\Documents\private file\Liraz Programming\AngularProject\AngularFi
 C:\Users\Liraz\Documents\private file\Liraz Programming\AngularProject\AngularFirstProject\MusicApp\API\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
 C:\Users\Liraz\Documents\private file\Liraz Programming\AngularProject\AngularFirstProject\MusicApp\API\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
 C:\Users\Liraz\Documents\private file\Liraz Programming\AngularProject\AngularFirstProject\MusicApp\API\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Liraz\Documents\private file\Liraz Programming\AngularProject\AngularFirstProject\MusicApp\API\bin\Debug\net5.0\CloudinaryDotNet.dll
+C:\Users\Liraz\Documents\private file\Liraz Programming\AngularProject\AngularFirstProject\MusicApp\API\bin\Debug\net5.0\Microsoft.Extensions.WebEncoders.dll
+C:\Users\Liraz\Documents\private file\Liraz Programming\AngularProject\AngularFirstProject\MusicApp\API\bin\Debug\net5.0\Newtonsoft.Json.dll
