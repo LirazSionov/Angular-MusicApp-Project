@@ -11,7 +11,9 @@
         <i class="fa-duotone fa-thumbs-up"></i>
       </button>
     </li>
-      <li class="list-inline-item"><button class="btn btn-primary"><i class="fa-duotone fa-messages"></i></button></li>
+      <li class="list-inline-item">
+        <button class="btn btn-primary" routerLink="/members/{{member.username}}" [queryParams]="{tab:3}">
+        <i class="fa-duotone fa-messages"></i></button></li>
     </ul>
   </div>
   <div class="card-body p-1">

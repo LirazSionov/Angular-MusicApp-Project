@@ -3,14 +3,16 @@ using System;
 using API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace API.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20220515160953_MessagesEntityAdded")]
+    partial class MessagesEntityAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -84,9 +86,6 @@ namespace API.Data.Migrations
                     b.Property<string>("RecipientUsername")
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("SenderDeleted")
-                        .HasColumnType("INTEGER");
-
                     b.Property<int>("SenderId")
                         .HasColumnType("INTEGER");
 
@@ -142,6 +141,21 @@ namespace API.Data.Migrations
                     b.ToTable("Likes");
                 });
 
+            modelBuilder.Entity("MessageMessage", b =>
+                {
+                    b.Property<int>("MessagesRecievedId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("MessagesSentId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("MessagesRecievedId", "MessagesSentId");
+
+                    b.HasIndex("MessagesSentId");
+
+                    b.ToTable("MessageMessage");
+                });
+
             modelBuilder.Entity("API.Entities.Message", b =>
                 {
                     b.HasOne("API.Entities.AppUser", "Recipient")
@@ -189,6 +203,21 @@ namespace API.Data.Migrations
                     b.Navigation("LikedUser");
 
                     b.Navigation("SourceUser");
+                });
+
+            modelBuilder.Entity("MessageMessage", b =>
+                {
+                    b.HasOne("API.Entities.Message", null)
+                        .WithMany()
+                        .HasForeignKey("MessagesRecievedId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("API.Entities.Message", null)
+                        .WithMany()
+                        .HasForeignKey("MessagesSentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("API.Entities.AppUser", b =>
