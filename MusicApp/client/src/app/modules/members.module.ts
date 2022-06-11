@@ -4,18 +4,25 @@ import { MemberListComponent } from '../members/member-list/member-list.componen
 import { MemberDetailComponent } from '../members/member-detail/member-detail.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from './shared.module';
+import { MemberMessagesComponent } from '../members/member-messages/member-messages.component';
+import { MemberDetailsResolver } from '../Resolvers/member-details.resolver';
 
 
 const routes:Routes=[
   {path:'',component:MemberListComponent,pathMatch:'full'},
-  {path:':username',component:MemberDetailComponent},
+  {path:':username',
+   component:MemberDetailComponent,
+   resolve:{
+    member:MemberDetailsResolver
+   }
+  }
 ]
 
 @NgModule({
   declarations: [
     MemberListComponent,
     MemberDetailComponent,
-
+    MemberMessagesComponent
 
   ],
   imports: [
@@ -26,7 +33,7 @@ const routes:Routes=[
   exports:[
     RouterModule,
     MemberListComponent,
-    MemberDetailComponent,
+    MemberDetailComponent
   ]
 })
 export class MembersModule { }

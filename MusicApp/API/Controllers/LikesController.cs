@@ -48,6 +48,7 @@ namespace API.Controllers
         }
 
         //Return the users to user that show him who like him & no
+        [HttpGet]
         public async Task<ActionResult<IEnumerable<LikeDto>>> GetUserLikes([FromQuery]LikeParams likeParams){
             likeParams.UserId=User.GetUserId();
             var users=await _likesRepository.GetUserLikes(likeParams);
