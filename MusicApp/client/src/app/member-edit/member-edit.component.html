@@ -1,6 +1,6 @@
 <div class="row" *ngIf="member">
   <div class="col-4">
-    <h1>Your Profile</h1>
+    <h1>   Your Profile</h1>
   </div>
   <div class="col-8">
     <div class="alert alert-info" *ngIf="editForm.dirty">
@@ -47,7 +47,7 @@
           <textarea [(ngModel)]="member.introduction" name="introduction" class="form-control" rows="6"></textarea>
           <!-- <h4>Price:</h4> -->
           <!-- <textarea [(ngModel)]="member.cost" name="cost" class="form-control" rows="6"></textarea> -->
-          <h4>suitable For:</h4>
+          <h4>Suitable For:</h4>
           <textarea [(ngModel)]="member.suitablFor" name="suitablFor" class="form-control" rows="6"></textarea>
           <h4 class="mt-2">Location Details & costs</h4>
           <div class="form-inline">
@@ -55,7 +55,7 @@
             <input type="text" [(ngModel)]="member.city" name="city" class="form-control mx-2">
             <label for="Country">Country:</label>
             <input type="text" [(ngModel)]="member.country" name="country" class="form-control mx-2">
-            <label for="Cost">Country:</label>
+            <label for="Cost">Cost:</label>
             <input type="text" [(ngModel)]="member.cost" name="cost" class="form-control mx-2">
           </div>
         </form>

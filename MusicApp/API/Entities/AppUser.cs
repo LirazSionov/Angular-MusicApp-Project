@@ -12,7 +12,7 @@ namespace API.Entities
         public string InstrumentType { get; set; }
         public DateTime UpLoaded { get; set; }=DateTime.Now;
         public DateTime LastApdate { get; set; }=DateTime.Now;
-        public string Cost { get; set; }
+        public int Cost { get; set; }
         public string Introduction { get; set; }
         public string SuitablFor { get; set; }
         public string City { get; set; }

@@ -7,7 +7,6 @@ import { SharedModule } from './shared.module';
 import { MemberMessagesComponent } from '../members/member-messages/member-messages.component';
 import { MemberDetailsResolver } from '../Resolvers/member-details.resolver';
 
-
 const routes:Routes=[
   {path:'',component:MemberListComponent,pathMatch:'full'},
   {path:':username',
@@ -17,7 +16,6 @@ const routes:Routes=[
    }
   }
 ]
-
 @NgModule({
   declarations: [
     MemberListComponent,

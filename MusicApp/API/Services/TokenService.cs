@@ -7,8 +7,6 @@ using API.Entities;
 using API.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-
-
 namespace API.Services
 {
     class TokenService : ITokenService

@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Message } from '../models/Message';
 import { getPaginatedResult, getPaginationParams } from './pagination-helper';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -15,9 +14,8 @@ export class MessageService {
   getMessage(pageNumber:number,pageSize:number,container:string){
     let params=getPaginationParams(pageNumber,pageSize);
     params=params.append("container",container);
-    return getPaginatedResult<Message[]>(`${this.baseUrl}massages`, params, this.http);
+    return getPaginatedResult<Message[]>(`${this.baseUrl}Messages`, params, this.http);
   }
-
 
   getMessageThread(username:string){
     return this.http.get<Message[]>(`${this.baseUrl}messages/thread/${username}`);

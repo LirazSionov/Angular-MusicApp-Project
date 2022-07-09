@@ -1,0 +1,29 @@
+.div2{
+  text-align: center;
+}
+.divForImg{
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+img{
+  position: relative;
+   width: 800px;
+  height: 400px;
+}
+.lead{
+  font-family: cursive;
+  color: black;
+}
+h1{
+  font-family:fantasy;
+  color: black;
+}
+input{
+  width: 70px;
+  border-radius: 2rem;
+}
+button{
+  border-radius: 2rem;
+}

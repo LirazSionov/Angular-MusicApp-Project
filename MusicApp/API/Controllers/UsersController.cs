@@ -1,19 +1,14 @@
-using Microsoft.EntityFrameworkCore;
-using API.Data;
 using API.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using System.Collections.Generic;
 using Microsoft.AspNetCore.Authorization;
 using API.Interfaces;
 using AutoMapper;
 using API.DTOs;
-using System.Security.Claims;
 using API.Extensions;
 using Microsoft.AspNetCore.Http;
 using System.Linq;
 using API.Helpers;
-
 namespace API.Controllers
 {
     [Authorize]
@@ -46,7 +41,11 @@ namespace API.Controllers
         [HttpGet]
         public async Task<ActionResult<PagedList<MemberDto>>> GetUsers([FromQuery]UserParams userParams)
         {
-            var user=await _userRepository.GetUserByNameAsync(User.GetUsername());
+            var user = await _userRepository.GetUserByNameAsync(User.GetUsername());
+            // if (string.IsNullOrEmpty(userParams.InstrumentType))
+            // {
+            //     userParams.InstrumentType = "piano";
+            // }
             userParams.CurrentUsername=user.UserName;
             var users = await _userRepository.GetMembersAsync(userParams);
             Response.AddPaginationHeader(

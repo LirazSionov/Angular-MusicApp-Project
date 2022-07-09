@@ -15,7 +15,7 @@ export class MemberCardComponent implements OnInit {
   ngOnInit(): void {
   }
   addLike(member:Member){
-    this.memberService.addLikes(member.username).subscribe(()=>
+    this.memberService.addLike(member.username).subscribe(()=>
     this.toastr.success(`You liked ${member.username}'s ${member.instrumentType}`));
   }
 

@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-
 namespace API.Entities
 {
     public class Message
@@ -20,6 +18,5 @@ namespace API.Entities
         public DateTime MessageSent { get; set; }=DateTime.Now;
         public bool SenderDeleted { get; set; }
         public bool RecipientDeleted { get; set; }
-        
     }
 }

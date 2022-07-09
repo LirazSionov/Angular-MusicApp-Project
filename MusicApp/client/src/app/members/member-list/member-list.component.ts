@@ -3,7 +3,6 @@ import { Member } from 'src/app/models/member';
 import { Pagination } from 'src/app/models/pagination';
 import { UserParams } from 'src/app/models/user-params';
 import { MemberService } from 'src/app/services/member.service';
-
 @Component({
   selector: 'app-member-list',
   templateUrl: './member-list.component.html',
@@ -19,7 +18,18 @@ export class MemberListComponent implements OnInit {
   },{
     value:'piano',
     display:'Piano'
-  }];
+  },{
+    value:'cello',
+    display:'Cello'}
+    ,{
+    value:'drums',
+    display:'Drums'}
+    ,{
+    value:'saxophone',
+    display:'Saxophone'}
+    ,{
+    value:'trumpet',
+    display:'Trumpet'}];
 
   constructor(private memberService:MemberService) {
     this.userParams=this.memberService.UserParams;
@@ -35,7 +45,7 @@ export class MemberListComponent implements OnInit {
         this.members=res.result;
         this.pagination=res.pagination;
       }
-    );
+    )
   }
 
   pageChanged({page}:any){

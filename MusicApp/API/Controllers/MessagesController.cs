@@ -28,7 +28,7 @@ namespace API.Controllers
             _messageRepository = messageRepository;
             
         }   
-        [HttpGet]
+        [HttpPost]
          public async Task<ActionResult<MessageDto>> CreateMessage(CreateMessageDto createMessageDto){
             var username=User.GetUsername();
             if (username==createMessageDto.RecipientUsername.ToLower())

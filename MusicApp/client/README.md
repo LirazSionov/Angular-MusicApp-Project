@@ -1,27 +1,36 @@
-# Client
+# A collaborative app for selling second-hand musical instruments
+### This app allows many users from all over the world to advertise their instruments for sale as well as view ### additional instruments that other users have uploaded, they can contact each other through the message box. ### They can also watch users like their instruments and the option of marking the instruments of other users  ### in the app is given.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+### The app is responsive and suitable for all possible screen sizes.
 
-## Development server
+# Data management on the DataBase side:
+###  Use of sqlite.
+### • Save passwords encrypted.
+### • You can create a new user or use an existing one,
+###   Like: username: liraz
+###         password: Pa$$w0rd
+# Server side:
+### • Using patterns design
+### • Using an external library to store Cloudinary images.
+### • Distribution of errors in an orderly manner in the application.
+### • Use of OOP principles - inheritance, interfaces, abstract, concealment.
+### • Creation of different controllers for different entities, division into modules, separation into layers.
+### Using DB using Core EF,.
+### • Use of Authorization & Authentication mechanisms with Token JWT.
+# Customer side:
+### • Login page
+### • Navigation menu
+### • Footer
+### • Content page
+### • Arranged architecture for each component.
+### • Using bootstrap-ngx.
+### • Use icons from the awesome font library.
+# Making a bonus:
+### • Using an external API to save the images.
+### • The main css format file is divided into separate files according to the different themes in each component.
+### • Use of management state.
+### • Implementation of server-side logging.
+### • Background Thread.
+### • Login using Provider.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Run the migration before building...

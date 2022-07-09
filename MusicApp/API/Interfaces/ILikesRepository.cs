@@ -1,9 +1,7 @@
-using System.Collections.Generic;
 using API.DTOs;
 using API.Entities;
 using System.Threading.Tasks;
 using API.Helpers;
-
 namespace API.Interfaces
 {
     public interface ILikesRepository

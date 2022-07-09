@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -32,10 +31,10 @@ namespace API.Data
             query=query.Where(x=>x.UserName!=userParams.CurrentUsername);
             query=query.Where(x=>x.InstrumentType==userParams.InstrumentType);
 
-            var minCost=Convert.ToInt32(userParams.MinCost);
-            var maxCost=Convert.ToInt32(userParams.MaxCost);
+            var minCost=int.Parse(userParams.MinCost);
+            var maxCost=int.Parse(userParams.MaxCost);
 
-            query=query.Where(x=>(Convert.ToInt32(x.Cost))>=minCost&&(Convert.ToInt32(x.Cost))<=maxCost);
+            query=query.Where(x=>((x.Cost)>=minCost)&&((x.Cost)<=maxCost));
 
             query=userParams.OrderBy switch{
                 "upLoaded"=>query.OrderByDescending(x=>x.UpLoaded),

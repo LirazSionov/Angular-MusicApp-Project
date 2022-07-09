@@ -10,7 +10,6 @@ import { ListsComponent } from './lists/lists.component';
 import { MemberEditComponent } from './member-edit/member-edit.component';
 import { MessagesComponent } from './messages/messages.component';
 
-
 const routes: Routes = [
   {
     path:'',
@@ -28,7 +27,7 @@ const routes: Routes = [
      },
      {path:'lists',component:ListsComponent},
      {path:'messages',component:MessagesComponent},
-     {path: 'member/edit', component:MemberEditComponent,canActivate:[PreventUnsavedChangesGuardGuard]}
+     {path: 'member/edit', component:MemberEditComponent,canDeactivate:[PreventUnsavedChangesGuardGuard]}
 
     ]
   },

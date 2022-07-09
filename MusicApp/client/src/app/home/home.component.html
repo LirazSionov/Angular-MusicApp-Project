@@ -1,12 +1,17 @@
 <div class="container">
-  <div *ngIf="!registerMode" style="text-align: center;">
-    <h1>Find Your Music self</h1>
-    <p class="lead"> Come on in to view new musical instruments...  all u need to do is sign up</p>
-    <div class="text-center">
-      <button class="btn btn-primary btn-lg mr-2" (click)="registerToggle()">
-        Register
-      </button>
-      <button class="btn btn-info btn-lg">Learn More</button>
+  <div class="div2" *ngIf="!registerMode">
+    <img src="https://res.cloudinary.com/ls212733786/image/upload/v1657218906/music%20photos/pictures/istockphoto-1194274274-612x612_yf63ex.jpg" alt="">
+    <div class="divForImg">
+      <br>
+      <h1>Find Your Instrument Music self</h1>
+      <h3 class="lead"> Come on in to view new musical instruments... All you need to do is sign up</h3>
+      <div class="text-center">
+        <button class="btn btn-primary btn-lg mr-2" (click)="registerToggle()">
+          Register
+        </button>
+        <button onclick="alert('You have an account? - Login the app.\nThan - create now! and buy your music!\n🎷🎺🎸🪕🎻🎹📯')"
+        class="btn btn-info btn-lg">Learn More</button>
+      </div>
     </div>
   </div>
 

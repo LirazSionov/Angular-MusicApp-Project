@@ -15,8 +15,8 @@ namespace API.Data
     public class MessagesRepository : IMessageRepository
     {
         private readonly DataContext _context;
-        private readonly Mapper _mapper;
-        public MessagesRepository(DataContext context, Mapper mapper)
+        private readonly IMapper _mapper;
+        public MessagesRepository(DataContext context, IMapper mapper)
         {
             _mapper = mapper;
             _context = context;

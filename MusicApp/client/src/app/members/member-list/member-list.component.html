@@ -6,24 +6,24 @@
 <div class="container mt-3">
   <form #form="ngForm" class="form-inline mb-3" (ngSubmit)="loadMembers()" autocomplete="off">
     <div class="form-group">
-      <label for="">Cost From:</label>
-      <input type="number" style="width: 70px;" class="form-control ml-1" name="minCost" [(ngModel)]="userParams.minCost">
+      <label>Cost From:</label>
+      <input type="number" style="width: 90px;" class="form-control ml-1" name="minCost" [(ngModel)]="userParams.minCost">
     </div>
     <div class="form-group px-2">
-      <label for="">Cost To:</label>
-      <input type="number" style="width: 70px;" class="form-control ml-1" name="maxCost" [(ngModel)]="userParams.maxCost">
+      <label>Cost To:</label>
+      <input type="number" style="width: 90px;" class="form-control ml-1" name="maxCost" [(ngModel)]="userParams.maxCost">
     </div>
     <div class="form-group px-2">
-      <label for="">Show:</label>
-      <select style="width: 130px;" class="form-control ml-1" name="gender" [(ngModel)]="userParams.instrumentType">
+      <label>Show:</label>
+      <select style="width: 130px;" class="form-control ml-1" name="instrumentType" [(ngModel)]="userParams.instrumentType">
         <option *ngFor="let instrumentType of instrumentTypeList" [value]="instrumentType.value">{{instrumentType.display}}</option>
       </select>
+      <br>
     </div>
     <button type="submit" class="btn btn-primary ml-1"> Apply Filters </button>
     <button (click)="resetFilters()" type="button" class="btn btn-info ml-1"> Reset Filters </button>
-    <div class="col">
+    <div>
       <div class="btn-group float-right">
-
         <button
           type="button"
           class="btn btn-primary"
@@ -33,6 +33,8 @@
           [(ngModel)]="userParams.orderBy">
           Last Apdate
         </button>
+      </div>
+     <div btn-group float-right>
         <button
           type="button"
           class="btn btn-primary"
@@ -40,7 +42,7 @@
           btnRadio="upLoaded"
           (click)="loadMembers()"
           [(ngModel)]="userParams.orderBy">
-          Newest Musical Member
+          Newest Musical Instruments Member
         </button>
       </div>
     </div>
@@ -53,6 +55,7 @@
   </div>
 </div>
 
+<div class="d-flex justify-content-center" *ngIf="pagination">
 <pagination
  [boundaryLinks]="true"
  [totalItems]="pagination.totalItems"
@@ -64,3 +67,4 @@
  firstText="&laquo;"
  lastText="&raquo;">
 </pagination>
+</div>

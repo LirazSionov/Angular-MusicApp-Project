@@ -7,7 +7,7 @@ export interface Member {
   instrumentType: string;
   upLoaded:       Date;
   lastApdate:     Date;
-  cost:           string;
+  cost:           number;
   introduction:   string;
   suitablFor:     string;
   city:           string;

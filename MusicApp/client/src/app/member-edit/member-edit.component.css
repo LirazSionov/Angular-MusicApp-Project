@@ -17,3 +17,13 @@
   display: inline-block;
   margin-bottom: 20px;
 }
+input{
+  border-radius: 2rem;
+}
+textarea{
+  border-radius: 2rem;
+}
+h4,strong,h1,label{
+  color:rgb(133, 22, 237);
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

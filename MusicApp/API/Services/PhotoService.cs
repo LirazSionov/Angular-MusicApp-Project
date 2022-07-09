@@ -5,7 +5,6 @@ using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
-
 namespace API.Services
 {
     public class PhotoService : IPhotoService
