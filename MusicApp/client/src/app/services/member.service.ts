@@ -1,6 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient  } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, of, take, tap } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { take, tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { Member } from '../models/member';
 import { PaginatedResult } from '../models/pagination';
@@ -14,7 +15,7 @@ import { getPaginatedResult, getPaginationParams } from './pagination-helper';
 export class MemberService {
   baseUrl=environment.apiUrl;
   members:Member[]=[];
-  memberCache=new Map<string,PaginatedResult<Member[]>>();
+  memberCache = new Map<string,PaginatedResult<Member[]>>();
   user:User;
   userParams:UserParams;
 
@@ -57,6 +58,7 @@ export class MemberService {
   getMembers(userParams:UserParams): Observable<PaginatedResult<Member[]>>{
     const cacheKey=Object.values(userParams).join('-');
     const response=this.memberCache.get(cacheKey);
+    //console.log(response);
     if(response) return of(response);
 
     let params = getPaginationParams(userParams.pageNumber,userParams.pageSize);
