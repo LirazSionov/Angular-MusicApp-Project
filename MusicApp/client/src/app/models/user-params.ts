@@ -8,7 +8,7 @@ export class UserParams {
   pageSize=5;
   orderBy="LastApdate";
 
-  constructor({instrumentType}:User) {
-    this.instrumentType=instrumentType;
+  constructor({ instrumentType }:User) {
+    this.instrumentType = instrumentType;
   }
 }

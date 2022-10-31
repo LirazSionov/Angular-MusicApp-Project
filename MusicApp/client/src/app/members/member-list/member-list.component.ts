@@ -39,6 +39,7 @@ export class MemberListComponent implements OnInit {
     this.loadMembers();
   }
   loadMembers(){
+   // console.log(this.members);
     this.memberService.UserParams=this.userParams;
     this.memberService.getMembers(this.userParams).subscribe(
       res=>{
@@ -55,6 +56,6 @@ export class MemberListComponent implements OnInit {
   }
   resetFilters(){
     this.userParams=this.memberService.resetUserParams();
-   this.loadMembers();
+    this.loadMembers();
   }
 }

@@ -8,7 +8,6 @@ using API.Interfaces;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using Microsoft.EntityFrameworkCore;
-
 namespace API.Data
 {
     public class UserRepository : IUserRepository
@@ -19,7 +18,6 @@ namespace API.Data
         {
             _mapper = mapper;
             _context = context;
-
         }
 
         public async Task<PagedList<MemberDto>> GetMembersAsync(UserParams userParams)
@@ -27,18 +25,19 @@ namespace API.Data
             // var query= _context.Users
             // .ProjectTo<MemberDto>(_mapper.ConfigurationProvider)
             // .AsNoTracking();
-            var query= _context.Users.AsQueryable();
-            query=query.Where(x=>x.UserName!=userParams.CurrentUsername);
-            query=query.Where(x=>x.InstrumentType==userParams.InstrumentType);
+            var query = _context.Users.AsQueryable();
+            query = query.Where(x => x.UserName != userParams.CurrentUsername);
+           // query = query.Where(x => x.InstrumentType == userParams.InstrumentType);
 
-            var minCost=int.Parse(userParams.MinCost);
-            var maxCost=int.Parse(userParams.MaxCost);
+            var minCost = int.Parse(userParams.MinCost);
+            var maxCost = int.Parse(userParams.MaxCost);
 
-            query=query.Where(x=>((x.Cost)>=minCost)&&((x.Cost)<=maxCost));
+            query = query.Where(x => ((x.Cost) >= minCost) && ((x.Cost) <= maxCost));
 
-            query=userParams.OrderBy switch{
-                "upLoaded"=>query.OrderByDescending(x=>x.UpLoaded),
-                _=>query.OrderByDescending(x=>x.LastApdate),
+            query = userParams.OrderBy switch
+            {
+                "upLoaded" => query.OrderByDescending(x => x.UpLoaded),
+                _ => query.OrderByDescending(x => x.LastApdate),
             };
 
             return await PagedList<MemberDto>.CreateAsync(
@@ -51,7 +50,7 @@ namespace API.Data
         public async Task<MemberDto> GetMemberAsync(string username)
         {
             return await _context.Users
-            .Where(x=>x.UserName==username)
+            .Where(x => x.UserName == username)
             .ProjectTo<MemberDto>(_mapper.ConfigurationProvider)
             .SingleOrDefaultAsync();
         }
@@ -74,6 +73,14 @@ namespace API.Data
             .Include(x => x.Photos)
             .ToListAsync();
         }
+
+        public async Task<List<AppUser>> GetMembers2Async()
+        {
+            return await _context.Users
+            .Include(x => x.Photos)
+            .ToListAsync();
+        }
+
 
         public async Task<bool> SaveAllAsync()
         {

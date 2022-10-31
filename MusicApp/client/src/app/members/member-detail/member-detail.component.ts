@@ -22,7 +22,9 @@ export class MemberDetailComponent implements OnInit , OnDestroy{
   activeTab:TabDirective;
   subscribtion:Subscription;
 
-  constructor(private memberService: MemberService, private route: ActivatedRoute,
+  constructor(
+    private memberService: MemberService,
+    private route: ActivatedRoute,
     private messagesService:MessageService) { }
 
   ngOnDestroy(): void {

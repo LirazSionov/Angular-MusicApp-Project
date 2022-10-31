@@ -14,7 +14,7 @@ import { getPaginatedResult, getPaginationParams } from './pagination-helper';
 })
 export class MemberService {
   baseUrl=environment.apiUrl;
-  members:Member[]=[];
+  members:Member[] = [];
   memberCache = new Map<string,PaginatedResult<Member[]>>();
   user:User;
   userParams:UserParams;
@@ -56,6 +56,7 @@ export class MemberService {
     }
 
   getMembers(userParams:UserParams): Observable<PaginatedResult<Member[]>>{
+    // debugger
     const cacheKey=Object.values(userParams).join('-');
     const response=this.memberCache.get(cacheKey);
     //console.log(response);
@@ -72,6 +73,10 @@ export class MemberService {
       tap(res=>this.memberCache.set(cacheKey,res))
     );
   }
+  // get() : Observable<Array<Member>>{
+  //   return this.http.get<Array<Member>>(`${this.baseUrl}users/set-main-photo/${PhotoId}`,{});
+
+  // }
 
   getMember(username:string): Observable<Member>{
     // const member=this.members.find(x=>x.username==username);

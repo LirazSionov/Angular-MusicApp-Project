@@ -9,7 +9,7 @@ import { MemberService } from 'src/app/services/member.service';
   styleUrls: ['./member-card.component.css']
 })
 export class MemberCardComponent implements OnInit {
-  @Input() member!: Member;
+  @Input() member: Member;
   constructor(private memberService:MemberService, private toastr:ToastrService) { }
 
   ngOnInit(): void {
